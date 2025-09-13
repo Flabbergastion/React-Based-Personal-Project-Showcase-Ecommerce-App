@@ -5,7 +5,7 @@ This is a simple e-commerce application built with React. It allows users to bro
 ## Features
 
 - **Landing Page**: A welcoming page that describes the purpose of the e-commerce site.
-- **Product Form**: A form for administrators to add new products, including fields for product name, description, price, and image URL.
+- **Product Form**: A form for administrators to add new products, including fields for product name, description, and price.
 - **Product Page**: Displays details of individual products, including name, description, price, and image.
 - **Admin Interface**: Allows administrators to update product values such as price and description.
 - **Search Functionality**: Users can dynamically search for products using a search bar.
