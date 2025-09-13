@@ -1,0 +1,184 @@
+/* Gradient background for the whole app */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Navbar with shadow and rounded corners */
+.navbar {
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    padding: 1rem 2rem;
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Navbar links with animated underline */
+.nav-link {
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-link:hover {
+    color: #ffd700;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Centered content with fade-in animation */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.business-title {
+    font-size: 3rem;
+    margin: 0;
+    color: #222;
+    text-shadow: 2px 2px 8px #c3cfe2;
+}
+
+.business-tagline {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Shop grid with hover effect */
+.shop-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-color: #ffd700;
+}
+
+.product-card h2 {
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: #444;
+    margin: 0.5rem 0;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 220px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.search-bar label {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-bar input[type="checkbox"] {
+    accent-color: #ffd700;
+    margin-right: 0.5rem;
+}
+
+/* Admin form styling */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 350px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background: #fafafa;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.admin-form h2 {
+    text-align: center;
+    color: #222;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 0.75rem;
+    background: linear-gradient(90deg, #ffd700 0%, #ffecb3 100%);
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #ffecb3 0%, #ffd700 100%);
+}
